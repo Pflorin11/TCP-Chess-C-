@@ -210,6 +210,19 @@ bool checkcheck(int x, int y, Piece *board[8][8], bool color) {
     //4King
     //4Pawn
 
+    int ki[8] ={ -2, -2, -1, -1, 1, 1, 2, 2};
+    int kj[8] ={ -1, 1, -2, 2, -2, 2, -1, 1};
+    
+    for (int l = 0; l <8; l++)
+        if(x+ki[l]>=0 && x+ki[l]<8 && y+kj[l]>=0 && y+kj[l]<8)
+            if (board[x+ki[l]][y+kj[l]] != NULL) {
+                if (board[x+ki[l]][y+kj[l]]->getColor() != board[x][y]->getColor()) {
+                    
+                    if (strcmp(typeid(*board[x+ki[l]][y+kj[l]]).name(), "6Knight") == 0)
+                        return true;
+            }
+        }
+
     for (int l = y - 1; l >= 0; l--)
         if (board[x][l] != NULL) {
             if (board[x][l]->getColor() != board[x][y]->getColor()) {

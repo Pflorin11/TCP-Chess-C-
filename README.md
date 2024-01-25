@@ -1,1 +1,1 @@
-# TCP-Chess-C-
+# TCP-Chess-Cpp

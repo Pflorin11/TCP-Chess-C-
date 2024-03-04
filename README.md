@@ -5,3 +5,4 @@ Chess game using a concurrent TCP server that allows multiple clients to play at
 - client interface made using QT
 - server uses multiplexing to manage client commands (concurrent due to the turn based nature of the game)
 
+colaborator Vasiliu Codrin
